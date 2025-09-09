@@ -1,6 +1,6 @@
 # CopyWriter Frontend
 
-A modern React frontend application for copywriting and content management, built with Vite and Axios.
+A modern React frontend application for copywriting and content management, built with Vite, Axios, Bootstrap, and SCSS for centralized styling.
 
 ## 🚀 Quick Start
 
@@ -13,10 +13,13 @@ A modern React frontend application for copywriting and content management, buil
 # Install dependencies
 npm install
 
-# Start development server
+# Start SCSS compilation (in watch mode)
+npm run scss
+
+# Start development server (in another terminal)
 npm run dev
 
-# In another terminal, start mock API server
+# Start mock API server (in another terminal)
 npm run mock-api
 ```
 
@@ -39,6 +42,8 @@ Create a `.env.local` file for API configuration:
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
 - `npm run mock-api` - Start mock API server
+- `npm run scss` - Watch SCSS files and compile to CSS
+- `npm run scss:build` - Compile SCSS to compressed CSS for production
 
 ### Mock API Setup
 This project includes a comprehensive mock API setup for development:
@@ -58,6 +63,12 @@ src/
 │   └── ApiExample.jsx  # API usage examples
 ├── services/           # API services
 │   └── api.js         # Axios API functions
+├── scss/              # SCSS source files
+│   ├── custom-bootstrap.scss  # Custom Bootstrap theme
+│   └── page-specific-styles.scss  # Page-specific styles
+├── css/               # Compiled CSS files (auto-generated)
+│   ├── custom-bootstrap.css
+│   └── page-specific-styles.css
 ├── App.jsx            # Main app component
 └── main.jsx           # App entry point
 
@@ -122,10 +133,40 @@ When your backend APIs are ready:
 3. Remove `public/mock-api/` directory
 4. Remove `json-server` dependency
 
+## 🎨 Styling & CSS Architecture
+
+This project uses a **centralized CSS approach** with SCSS and Bootstrap:
+
+### SCSS Compilation
+- **Source**: All styles are written in SCSS files in `src/scss/`
+- **Compilation**: SCSS files are compiled to CSS in `src/css/`
+- **Watch Mode**: `npm run scss` automatically recompiles on changes
+- **Production**: `npm run scss:build` creates compressed CSS
+
+### Bootstrap Integration
+- **Custom Theme**: `src/scss/custom-bootstrap.scss` contains custom Bootstrap variables
+- **Color Palette**: Custom primary colors and gray scale defined
+- **Components**: Full Bootstrap component library available
+- **JavaScript**: Bootstrap JS functionality included
+
+### Development Workflow
+1. **Edit SCSS**: Modify files in `src/scss/`
+2. **Auto-compile**: SCSS watch mode compiles to `src/css/`
+3. **Import CSS**: Compiled CSS is imported in `main.jsx`
+4. **Use Classes**: Apply Bootstrap classes in React components
+
+### Why This Approach?
+- **Centralized**: All styles in one place, easy to maintain
+- **Customizable**: Full control over Bootstrap theme
+- **Performance**: Only necessary CSS is compiled
+- **Scalable**: Easy to add new styles and components
+
 ## 🛠️ Tech Stack
 
 - **React 19** - UI framework
 - **Vite** - Build tool and dev server
+- **Bootstrap 5** - CSS framework with custom theme
+- **SCSS** - CSS preprocessor for styling
 - **Axios** - HTTP client
 - **JSON Server** - Mock API server
 - **ESLint** - Code linting

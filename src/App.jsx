@@ -1,30 +1,41 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import ApiExample from './components/ApiExample'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showApiExample, setShowApiExample] = useState(false)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      {/* ========================================
+          MOCK API DEMONSTRATION
+          ========================================
+          This section demonstrates the mock API functionality
+          You can remove this section when building your actual features
+          ======================================== */}
+      <div className="card" style={{ marginTop: '20px' }}>
+        <h3>Mock API Demo</h3>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          This demonstrates the mock API setup. Make sure to run{' '}
+          <code>npm run mock-api</code> in a separate terminal.
         </p>
+        <button 
+          onClick={() => setShowApiExample(!showApiExample)}
+          style={{ 
+            padding: '10px 20px', 
+            backgroundColor: '#646cff', 
+            color: 'white', 
+            border: 'none', 
+            borderRadius: '4px',
+            cursor: 'pointer'
+          }}
+        >
+          {showApiExample ? 'Hide' : 'Show'} API Examples
+        </button>
       </div>
+      
+      {showApiExample && <ApiExample />}
+      
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>

@@ -1,0 +1,15 @@
+{
+  "/api/users": "/users",
+  "/api/users/:id": "/users/:id",
+  "/api/content-types": "/contentTypes",
+  "/api/content-types/:id": "/contentTypes/:id",
+  "/api/content": "/content",
+  "/api/content/:id": "/content/:id",
+  "/api/templates": "/templates",
+  "/api/templates/:id": "/templates/:id",
+  "/api/analytics": "/analytics",
+  "/api/analytics/:id": "/analytics/:id",
+  "/api/auth/login": "/auth/login",
+  "/api/auth/logout": "/auth/logout",
+  "/api/auth/profile": "/auth/profile"
+}

@@ -1,0 +1,236 @@
+{
+  "users": [
+    {
+      "name": "Updated User Name",
+      "isActive": false,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "role": "writer",
+      "createdAt": "2024-01-16T09:15:00Z",
+      "lastLogin": "2024-01-20T16:45:00Z",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "name": "Mike Johnson",
+      "email": "mike.johnson@example.com",
+      "role": "editor",
+      "createdAt": "2024-01-17T11:20:00Z",
+      "lastLogin": "2024-01-19T13:30:00Z",
+      "isActive": false
+    },
+    {
+      "name": "Test User",
+      "email": "test@example.com",
+      "role": "writer",
+      "isActive": true,
+      "id": 4
+    }
+  ],
+  "contentTypes": [
+    {
+      "id": 1,
+      "name": "Blog Post",
+      "description": "Long-form articles for blog content",
+      "template": "blog-template",
+      "requiredFields": [
+        "title",
+        "content",
+        "tags"
+      ],
+      "optionalFields": [
+        "featuredImage",
+        "excerpt",
+        "metaDescription"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-10T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Social Media Post",
+      "description": "Short-form content for social platforms",
+      "template": "social-template",
+      "requiredFields": [
+        "content",
+        "platform"
+      ],
+      "optionalFields": [
+        "hashtags",
+        "image",
+        "link"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-10T08:15:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Email Newsletter",
+      "description": "Email marketing content",
+      "template": "email-template",
+      "requiredFields": [
+        "subject",
+        "content",
+        "recipients"
+      ],
+      "optionalFields": [
+        "previewText",
+        "ctaButton",
+        "unsubscribeLink"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-10T08:30:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Product Description",
+      "description": "E-commerce product content",
+      "template": "product-template",
+      "requiredFields": [
+        "title",
+        "description",
+        "price"
+      ],
+      "optionalFields": [
+        "features",
+        "specifications",
+        "reviews"
+      ],
+      "isActive": false,
+      "createdAt": "2024-01-10T08:45:00Z"
+    }
+  ],
+  "content": [
+    {
+      "id": 1,
+      "title": "10 Tips for Better Copywriting",
+      "content": "Copywriting is an art that combines psychology, marketing, and storytelling...",
+      "contentType": "Blog Post",
+      "authorId": 1,
+      "status": "published",
+      "tags": [
+        "copywriting",
+        "tips",
+        "marketing"
+      ],
+      "wordCount": 1250,
+      "readTime": "5 min",
+      "createdAt": "2024-01-18T10:00:00Z",
+      "updatedAt": "2024-01-18T10:00:00Z",
+      "publishedAt": "2024-01-18T10:00:00Z",
+      "views": 342,
+      "likes": 28
+    },
+    {
+      "id": 2,
+      "title": "New Product Launch - Exciting News!",
+      "content": "We're thrilled to announce our latest innovation...",
+      "contentType": "Social Media Post",
+      "authorId": 2,
+      "status": "draft",
+      "tags": [
+        "announcement",
+        "product",
+        "launch"
+      ],
+      "platform": "twitter",
+      "characterCount": 180,
+      "createdAt": "2024-01-19T14:30:00Z",
+      "updatedAt": "2024-01-19T14:30:00Z",
+      "scheduledFor": "2024-01-21T09:00:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Weekly Newsletter - Industry Updates",
+      "content": "This week in the industry: major trends, updates, and insights...",
+      "contentType": "Email Newsletter",
+      "authorId": 1,
+      "status": "scheduled",
+      "recipients": 1250,
+      "openRate": 0,
+      "clickRate": 0,
+      "createdAt": "2024-01-20T11:00:00Z",
+      "updatedAt": "2024-01-20T11:00:00Z",
+      "scheduledFor": "2024-01-22T08:00:00Z"
+    }
+  ],
+  "templates": [
+    {
+      "id": 1,
+      "name": "Blog Post Template",
+      "type": "blog-template",
+      "content": "# {{title}}\n\n## Introduction\n{{introduction}}\n\n## Main Content\n{{mainContent}}\n\n## Conclusion\n{{conclusion}}\n\n---\n*Published on {{date}} by {{author}}*",
+      "variables": [
+        "title",
+        "introduction",
+        "mainContent",
+        "conclusion",
+        "date",
+        "author"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-10T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Social Media Template",
+      "type": "social-template",
+      "content": "{{content}}\n\n{{hashtags}}\n\n#{{platform}} #marketing",
+      "variables": [
+        "content",
+        "hashtags",
+        "platform"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-10T09:15:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Email Template",
+      "type": "email-template",
+      "content": "Subject: {{subject}}\n\nHi {{recipientName}},\n\n{{content}}\n\n{{ctaButton}}\n\nBest regards,\n{{senderName}}",
+      "variables": [
+        "subject",
+        "recipientName",
+        "content",
+        "ctaButton",
+        "senderName"
+      ],
+      "isActive": true,
+      "createdAt": "2024-01-10T09:30:00Z"
+    }
+  ],
+  "analytics": [
+    {
+      "id": 1,
+      "contentId": 1,
+      "date": "2024-01-20",
+      "views": 45,
+      "clicks": 12,
+      "shares": 3,
+      "engagement": 0.267
+    },
+    {
+      "id": 2,
+      "contentId": 1,
+      "date": "2024-01-19",
+      "views": 38,
+      "clicks": 8,
+      "shares": 2,
+      "engagement": 0.263
+    },
+    {
+      "id": 3,
+      "contentId": 2,
+      "date": "2024-01-20",
+      "views": 120,
+      "clicks": 25,
+      "shares": 7,
+      "engagement": 0.267
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-# CopyWriter Frontend
+# Frontend Project Template
 
-A modern React frontend application for copywriting and content management, built with Vite, Axios, Bootstrap, and SCSS for centralized styling.
+A modern React frontend application template, built with Vite, Axios, Bootstrap, and SCSS for centralized styling.
 
 ## 🚀 Quick Start
 

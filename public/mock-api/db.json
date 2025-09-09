@@ -1,12 +1,7 @@
 {
   "users": [
     {
-      "name": "Updated User Name",
-      "isActive": false,
-      "id": 1
-    },
-    {
-      "id": 2,
+      "id": 1,
       "name": "Jane Smith",
       "email": "jane.smith@example.com",
       "role": "writer",
@@ -15,20 +10,13 @@
       "isActive": true
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "Mike Johnson",
       "email": "mike.johnson@example.com",
       "role": "editor",
       "createdAt": "2024-01-17T11:20:00Z",
       "lastLogin": "2024-01-19T13:30:00Z",
       "isActive": false
-    },
-    {
-      "name": "Test User",
-      "email": "test@example.com",
-      "role": "writer",
-      "isActive": true,
-      "id": 4
     }
   ],
   "contentTypes": [
